@@ -1,0 +1,25 @@
+{
+    "name": "red-tetris",
+    "version": "1.0.0",
+    "description": "Tetris multi-joueurs en réseau",
+    "type": "module",
+    "scripts": {
+      "install": "pnpm install:all",
+      "install:all": "pnpm install:server && pnpm install:client",
+      "install:server": "cd server && pnpm install",
+      "install:client": "cd client && pnpm install",
+      "dev": "concurrently \"pnpm run dev:server\" \"pnpm run dev:client\"",
+      "dev:server": "cd server && pnpm run dev",
+      "dev:client": "cd client && pnpm run dev",
+      "test": "pnpm run test:server && pnpm run test:client",
+      "test:server": "cd server && pnpm test",
+      "test:client": "cd client && pnpm test"
+    },
+    "devDependencies": {
+      "concurrently": "^8.2.2"
+    },
+    "engines": {
+      "node": ">=18.0.0",
+      "pnpm": ">=8.0.0"
+    }
+  }
